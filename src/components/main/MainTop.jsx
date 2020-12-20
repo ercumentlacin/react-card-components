@@ -15,7 +15,7 @@ function MainTop() {
             <a href="#" className="btn btn-primary my-2">
               Main call to action
             </a>
-            <a href="#" className="btn btn-secondary my-2">
+            <a href="#" className="btn ms-4 btn-secondary my-2">
               Secondary action
             </a>
           </p>
