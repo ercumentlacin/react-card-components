@@ -3,8 +3,8 @@ import Card from "./Card";
 import ENTRY_LIST from "../../data/entry-list";
 
 function MainMiddle() {
-  const CardComponent = ENTRY_LIST.map(item => (
-    <Card imgUrl={item.imgUrl} body={item.body} like={item.like} />
+  const CardComponent = ENTRY_LIST.map((item, index) => (
+    <Card imgUrl={item.imgUrl} body={item.body} like={item.like} id={index} />
   ));
   return (
     <div className="album py-5 bg-light">
