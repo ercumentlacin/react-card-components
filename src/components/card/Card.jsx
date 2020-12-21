@@ -1,11 +1,12 @@
 import React from "react";
+import CardImg from "./CardImg";
 
 function Card(props) {
   const [like, setLike] = React.useState(
     Number(localStorage.getItem(props.id)) || 0
   );
 
-  const clickHandler = (event) => {
+  const clickHandler = event => {
     event.target.name == "increase" ? setLike(like + 1) : setLike(like - 1);
   };
 
@@ -14,9 +15,8 @@ function Card(props) {
   return (
     <div className="col">
       <div className="card shadow-sm">
-        <img src={props.imgUrl} className="bd-placeholder-img card-img-top" />
+        <CardImg imgUrl={props.imgUrl} />
         <div className="card-body">
-          {console.log(props.id)}
           <p className="card-text">{props.body}</p>
           <div className="d-flex justify-content-between align-items-center">
             <div className="btn-group">
